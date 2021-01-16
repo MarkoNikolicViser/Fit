@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
+import Profil from './components/profil';
+import Home from './components/home';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Unos from './components/unos'
+import {TProvider} from './components/context'
+import Recepti from './components/recepti';
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <TProvider>
+      <div className="split">
+        <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route path='/unos' component={Unos}/>
+        <Route path='/recepti' component={Recepti}/>
+        </Switch>
+        <Profil/>
+      </div>
+      </TProvider>
+      </Router>
     </div>
   );
 }

@@ -1,38 +1,668 @@
-.App {
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+html{
+  background-color: rgb(223, 219, 219);
+  color: #333030;
+  font-size: 62.5%;
+}
+html ::selection{
+  background-color: #8977eb;
+}
+.split{
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.home{
+  height: 100vh;
+  width: 70%;
+  border-right: #6c5dc3 solid 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.pozadina-moto{
+  position: absolute;
+  width: 68%;
+  top: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pozadina-moto h1{
+  font-size: 3rem;
+}
+.pozadina-moto h3{
+  font-size: 1.5rem;
+}
+.home img{
+  width: 50%;
+  height: 30%;
+}
+.profil{
+  height: 100vh;
+  width: 30%;
+  font-family: 'Poppins', sans-serif;
+}
+.kartice{
+  position: absolute;
+  bottom: 60px;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.kartice h5{
+  font-size: 1.5rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.kartica{
+  font-size: 1rem;
+  height: 14rem;
+  width: 25%;
+  border-radius: 0.5rem;
+  box-shadow:2px 2px 4px 4px #888888;
+}
+.kartice :hover{
+background-color: rgb(185, 185, 185);
+}
+.kartica img{
+  height:80%;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.home nav{
+  width: 20%;
+  height: 4%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+nav li{
+  list-style: none;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+.profil nav{
+  width: 100%;
+height: 4%;
+padding-top: 6.8%;
+padding-left:15%;
+}
+.moto{ 
+ font-size: 2rem;
+ position: absolute;
+ top: 170px;
+ padding-left: 5%;
+}
+.moto h3{
+  font-size: 2rem;
+  padding-bottom: 9%;
+}
+.moto h4{
+  font-size: 1.5rem;
+}
+.arrow{
+  font-size: 3rem;
+  color: #6c5dc3;
+}
+.progres{
+  position: absolute;
+  bottom: 190px;
+  padding-left: 5%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.progres h3{
+  font-size: 1.5rem;
+}
+.progres span{
+  font-size: 1rem;
+}
+.kalorije{
+  width: 150px;
+  height: 15px;
+  background-color: darkgray;
+  border-radius: 10px;
+}
+.kalorije1{
+  margin-bottom: 0.7rem;
+  width: 0%;
+  height: 100%;
+  background-color: #1ca844;
+  border-radius: 10px;
+}
+.voda{
+  width: 150px;
+  height: 15px;
+  background-color: darkgray;
+  border-radius: 10px;
+}
+.voda1{
+  margin-bottom: 0.7rem;
+  width: 0%;
+  height: 100%;
+  background-color: #67a19d;
+  border-radius: 10px;
+}
+.progresElements{
+  position: absolute;
+  bottom: 40px;
+  right: -74px;
+}
+.san{
+  width: 150px;
+  height: 15px;
+  background-color: darkgray;
+  border-radius: 10px;
+}
+.san1{
+  margin-bottom: 0.7rem;
+  width: 20%;
+  height: 100%;
+  background-color: #8977eb;
+  border-radius: 10px;
+}
+.water{
+  position: absolute;
+  bottom: -50px;
+}
+.sleep{
+  position: absolute;
+  bottom: -100px;
+}
+.cal{
+  position: absolute;
+  bottom: 0px;
+}
+.kalorije-procenti{
+  position: absolute;
+  left: 170px;
+  top: -5px;
+}
+span{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 9px;
+}
+.sleep img{
+  position: absolute;
+  left: -33px;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+}
+.water img{
+  position: absolute;
+  left: -33px;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+}
+.cal img{
+  position: absolute;
+  left: -33px;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+}
+a{
+  text-decoration: none;
+  color: #2f2e41;
+}
+/*  UNOS TAB  */
+.unos{
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(223, 219, 219);
+  width: 70%;
+  height: 100vh;
+  border-right: #6c5dc3 solid 20px;
+  display: flex;
+}
+.unos nav{
+  width: 20%;
+  height: 4%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
   }
+.kalkulator-kalorija{
+  width: 65%;
+  height: 100vh;
+  border-right: #6c5dc3 solid 5px;
+}
+.automatski-unos{
+  overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  border-bottom: #6c5dc3 solid 5px; 
+}
+.voda-san{
+  width: 35%;
+  height: 100vh;
+}
+.unos-vode{
+  width: 100%;
+  height: 50vh;
+  border-bottom: #6c5dc3 solid 5px;
+  text-align: center;
+}
+.unos-vode h3{
+  padding-top: 2%;
+  padding-bottom: 5%;
+  font-size: 2rem;
+}
+.unos-vode h4{
+  font-size: 1.5rem;
+}
+.unos-vode img{
+  width: 60%;
+  height: 30%;
+}
+.arrow2 {
+  border: solid #67a19d;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 2%;
+}
+.arrow2:hover{
+  border-width: 0 8px 8px 0;
+}
+.arrow1 {
+  border: solid #8A77EB;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 2%;
+}
+.arrow1:hover{
+  border-width: 0 8px 8px 0;
+}
+.right {
+  margin-left: 3%;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  margin-right: 3%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.unos-vode .wtr{
+  width: 25px;
+  height: 25px;
+}
+.spavanje-svg{
+  margin-top: -4%;
+  margin-bottom: -1%;
+}
+.dodavanje-vode{
+  padding-top: 5%;
+}
+.unos-sna{
+  padding-top: 2%;
+  width: 100%;
+  height: 50vh;
+  align-items: center;
+  text-align: center;
+}
+.unos-sna h3{
+  padding-top: 2%;
+  padding-bottom: 5%;
+  font-size: 2rem;
+}
+.unos-sna h4{
+  font-size: 1.5rem;
+  padding-bottom: 5%;
+}
+.unos-sna img{
+  width: 60%;
+  height: 30%;
+}
+.unos-sna .bed{
+  width: 10%;
+  height: 5%;
+}
+.dodavanje-sna{
+  margin: -7%;
+}
+.dodavanje-sna{
+  padding-top: 2%;
+}
+.manuelni-unos-forma{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 1rem;
+}
+.manuelni-unos h6{
+font-size: 1.8rem;
+text-align: center;
+margin-left: -18%;
+}
+.manuelni-ispis{
+  margin-left: 30%;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.manuelni-ispis li{
+  text-align: center;
+  color: black;
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.manuelni-unos hr{
+  width:60%;
+  text-align: center;
+  margin-left: 22.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*------------------------RECEPTI------------------------------------*/
+.recepti{
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  width: 70%;
+  height: 100vh;
+  border-right: #6c5dc3 solid 20px;
+}
+.recepti nav{
+  width: 20%;
+  height: 4%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+nav li{
+  list-style: none;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+.forma-recept{
+  height: 20%;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
+.recept-kartica h1{
+  font-size: 1.2rem;
+}
+.recept-kartica h5{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: -6%;
+  left: 35%;
+}
+.recept-kartica{
+  position: relative;
+  width: 15rem;
+  height: 19rem;
+  border: solid 1px black;
+  display: block;
+  margin-bottom: 1rem;
+  /* clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%); */
+  }
+.recept-kartice{
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  margin-left: -1%;
+  height: auto;
+  width: 70%;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-evenly;
+}
+.recept-kartica img{
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  width: 100%;
+  height: 60%;
+}
+
+/* ----------------MODALS-------------------- */
+.modal-wraper{
+  position: relative;
+  z-index: 1;
+}
+.modal-style{
+  height: 80vh;
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  overflow: scroll;
+  margin-bottom: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgb(223, 219, 219);
+  padding: 50px;
+  z-index: 1000;
+}
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0,0,0, .7);
+}
+.gasi-modal{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 3rem;
+}
+.slika-nutrijenti{
+  width: 100%;
+  display: flex;
+  padding-bottom: 2%;
+}
+.slika-nutrijenti img{
+  width: 50%rem;
+  height: 35rem;
+  padding-right: 2%;
+}
+.naslov-kalorije{
+  display: flex;
+}
+.naslov-kalorije .naslov{
+  padding-right: 5%;
+  padding-bottom: 2%;
+}
+.sastojci li{
+  padding-left: 25%;
+}
+.sastojci h1{
+  text-align: center;
+  padding-bottom: 2%;
+}
+.recept-kartice  :hover{
+  background-color: rgb(185, 185, 185);
+}
+.nutrijenti{
+  width: 50%;
+  flex-wrap: wrap;
   display: flex;
   flex-direction: column;
+}
+.unos-kalorije{
+  width: 20%;
+}
+.automatski-unos-namirnice{
+  position: absolute;
+  top: 22%;
+  height: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  text-align:center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  margin-left: 0.2%;
 }
-
-.App-link {
-  color: #61dafb;
+.automatski-unos-namirnica{
+  overflow: hidden;
+  width:8rem;
+  height: 5rem;
+  border: 1px solid black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.automatski-unos-namirnice :hover{
+  background-color: rgb(185, 185, 185);
+}
+.automatski-unos-namirnica li{
+  list-style: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.automatski-unos form{
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 30%;
+}
+.aling-right-cals{
+  position: absolute;
+  left: 27%;
+}
+.aling-left{
+  margin-left: -35%;
+}
+.manuelni-ispis .iks{
+  color: red;
+  margin-right: -5%;
+  font-size: 1.5rem;
+}
+/* --------------------------------Responsivnes for mobile phones------------------------------ */
+@media screen and (max-width:992px){
+  html{
+    font-size: 55%;
   }
-  to {
-    transform: rotate(360deg);
+  .nutrijenti{
+    height: 35rem;
+  }
+  .recept-kartice{
+    overflow: hidden;
+  }
+}
+@media screen and (max-width:600px){
+  html{
+    font-size: 45%;
+  }
+  .split{
+   display: block;
+  }
+  .home{
+    width: 100%;
+    border: none;
+    height: 60vh;
+  }
+  .kartice{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+  .kartica{
+    width: 25%;
+  }
+  .profil{
+    height: 40vh;
+    width: 100%;
+    border-top: #6c5dc3 solid 20px;
+  }
+  .profil li {
+    margin-top: -3%;
+    margin-left: -15%;
+  }
+  .moto{
+    width: 50%;
+    position: relative;
+    margin-top: -30%;
+    margin-left: -3%;
+  }
+  .progres{
+    position: relative;
+    margin-top: 60%;
+    margin-left: 45%;
+  }
+ .pozadina-moto{
+   width: 100%;
+ }
+  .pozadina-moto img{
+    margin-left: -40%;
+    margin-top: -10%;
+  }
+  .pozadina-moto div{
+    position: absolute;
+    left: 60%;
+    top: -10%;
+  }
+  .progres h3{
+    font-size: 2rem;
+    position: relative;
+    margin-left: -20%;
+    width: 10%;
+  }
+  .progres span{
+    font-size: 1.5rem;
+  }
+  .recepti{
+  width: 100%;
+  height: 130%;
+  border: none;
+  }
+  .recept-kartice{
+    margin-left: 14%;
+  }
+  .nutrijenti{
+    height: 35rem;
+  }
+  .naslov-kalorije{
+    margin-left: -11%;
+  }
+  .slika-nutrijenti{
+  margin-left: -11%;
+  }
+  .modal-style{
+  height: auto;
+  }
+  .unos{
+    width: 100%;
+    border: none;
+  }
+  .unos-vode, .unos-sna{
+    padding-top: 40%;
+    width:95%;
+  }
+  .unos-namirnica{
+    margin-left: 2%;
+  }
+  .automatski-unos input{
+    width: 12rem;
+  }
+  .automatski-unos-namirnice{
+    margin-left: 3.5%;
+    height: 25%;
+  }
+  .unos{
+    height: auto;
+  }
+  .aling-right-cals{
+    position: absolute;
+    left: 40%;
+  }
+  .aling-left{
+    margin-left: -60%;
   }
 }
