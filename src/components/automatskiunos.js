@@ -29,6 +29,7 @@ const response=await fetch
 (`https://api.edamam.com/api/food-database/v2/parser?ingr=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
 
 const data=await response.json();
+    if(data.hits)
 setNamirnice(data.hints);
 
 }
